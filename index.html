@@ -1,356 +1,61 @@
-<!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Story by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+---
+layout: default
+---
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="divided">
 
-				<!-- One -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-						<div class="content">
-							<h1>Story</h1>
-							<p class="major">A (modular, highly tweakable) responsive one-page template designed by <a href="https://html5up.net">HTML5 UP</a> and released for free under the <a href="https://html5up.net/license">Creative Commons</a>.</p>
-							<ul class="actions stacked">
-								<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/banner.jpg" alt="" />
-						</div>
-					</section>
+{% for post in paginator.posts %}
 
-				<!-- Two -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-						<div class="content">
-							<h2>Magna etiam feugiat</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight01.jpg" alt="" />
-						</div>
-					</section>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-				<!-- Three -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>Tempus adipiscing</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight02.jpg" alt="" />
-						</div>
-					</section>
+    <div class="main-content" itemprop="articleBody">
 
-				<!-- Four -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>Pharetra etiam nulla</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight03.jpg" alt="" />
-						</div>
-					</section>
+<a name="blog{{ forloop.index }}"></a>
 
-				<!-- Five -->
-					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Massa sed condimentum</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
-						</div>
+  <header class="post-header">
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><h3 class="post-title" itemprop="name headline">{{ post.title }}</h3> </a>
 
-						<!-- Gallery -->
-							<div class="gallery style2 medium lightbox onscroll-fade-in">
-								<article>
-									<a href="images/gallery/fulls/01.jpg" class="image">
-										<img src="images/gallery/thumbs/01.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Ipsum Dolor</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/02.jpg" class="image">
-										<img src="images/gallery/thumbs/02.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Feugiat Lorem</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/03.jpg" class="image">
-										<img src="images/gallery/thumbs/03.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Magna Amet</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/04.jpg" class="image">
-										<img src="images/gallery/thumbs/04.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Sed Tempus</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/05.jpg" class="image">
-										<img src="images/gallery/thumbs/05.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Ultrices Magna</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/06.jpg" class="image">
-										<img src="images/gallery/thumbs/06.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Sed Tempus</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/07.jpg" class="image">
-										<img src="images/gallery/thumbs/07.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Ipsum Lorem</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/08.jpg" class="image">
-										<img src="images/gallery/thumbs/08.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Magna Risus</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/09.jpg" class="image">
-										<img src="images/gallery/thumbs/09.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Tempus Dolor</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/10.jpg" class="image">
-										<img src="images/gallery/thumbs/10.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Sed Etiam</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/11.jpg" class="image">
-										<img src="images/gallery/thumbs/11.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Magna Lorem</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/12.jpg" class="image">
-										<img src="images/gallery/thumbs/12.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Ipsum Dolor</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-							</div>
+  </header>
 
-					</section>
+    {{ post.content }}
 
-				<!-- Six -->
-					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Ipsum sed consequat</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
-							<div class="items style1 medium onscroll-fade-in">
-								<section>
-									<span class="icon style2 major fa-diamond"></span>
-									<h3>Lorem</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-save"></span>
-									<h3>Ipsum</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-bar-chart"></span>
-									<h3>Dolor</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-wifi"></span>
-									<h3>Amet</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-cog"></span>
-									<h3>Magna</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-paper-plane"></span>
-									<h3>Tempus</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-desktop"></span>
-									<h3>Aliquam</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-refresh"></span>
-									<h3>Elit</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-hashtag"></span>
-									<h3>Morbi</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-bolt"></span>
-									<h3>Turpis</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-envelope"></span>
-									<h3>Ultrices</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-leaf"></span>
-									<h3>Risus</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-							</div>
-						</div>
-					</section>
+<p class="post-meta" style="text-align: right; color: rgb(152,152,152);"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %} • <label for="our-popup-{{ forloop.index }}"><i class="fa fa-share"></i> Share / Permalink</label></p>
 
-				<!-- Seven -->
-					<section class="wrapper style1 align-center">
-						<div class="inner medium">
-							<h2>Get in touch</h2>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field half">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" value="" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" value="" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="6"></textarea>
-									</div>
-								</div>
-								<ul class="actions special">
-									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
-								</ul>
-							</form>
+	<span>
+		<input type="checkbox" id="our-popup-{{ forloop.index }}" class="smoosh" />
 
-						</div>
-					</section>
+		<!-- invisible; when checked, the popup opens -->
+		<label for="our-popup-{{ forloop.index }}" class="overlay"></label>
 
-				<!-- Footer -->
-					<footer class="wrapper style1 align-center">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-							<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-						</div>
-					</footer>
+		<!-- the popup starts here -->
+		<div class="overlay-dialogue">
+			<h3>Share "{{ post.title  }}"</h3>
 
-			</div>
+            <!-- Target -->
+<input id="foo{{ forloop.index }}" value="{{ site.url }}{{ post.url }}" type="url">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<!-- Trigger -->
+<button class="share-btn" data-clipboard-target="#foo{{ forloop.index }}">COPY LINK
+</button>
+            <p style="text-align: center;">Share on: <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ post.url }}" target="_blank">Facebook</a> • <a href="https://twitter.com/share?url={{ site.url }}{{ post.url }}&amp;text={{ post.title }}" target="_blank">Twitter</a>
 
-	</body>
-</html>
+			<p style="text-align: center;"><label for="our-popup-{{ forloop.index }}">cancel</label></p>
+		</div>
+	</span>
+
+  </div>
+
+</article>
+
+{% endfor %}
+
+<div class="pagination" style="text-align: center;">
+
+  {% if paginator.next_page %}
+    <h2><a href="{{ paginator.next_page_path }}" class="next">- more posts -</a></h2>
+  {% endif %}
+
+  {% if paginator.previous_page %}
+    <h2><a href="{{ paginator.previous_page_path }}" class="previous">- previous page -</a></h2>
+  {% endif %}
+
+</div>
